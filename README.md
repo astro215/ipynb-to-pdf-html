@@ -51,6 +51,10 @@ To run the app locally:
 - streamlit
 - nbconvert
 
+## Deployed App
+
+The deployed app can be accessed [ipynb-to-pdf-html](https://ipynb-to-pdf-html.streamlit.app/).
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
