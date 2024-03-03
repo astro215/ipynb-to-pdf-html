@@ -33,18 +33,11 @@ def main():
 
         if st.button("Convert to HTML"):
             html_filename = convert_to_html(notebook, filename)
-            st.markdown(get_download_link(html_filename, 'html', 'Download HTML'), unsafe_allow_html=True)
+            st.download_button(label="Download HTML", data=open(html_filename, 'rb'), file_name=os.path.basename(html_filename), mime="text/html")
 
         if st.button("Convert to PDF"):
             pdf_filename = convert_to_pdf(notebook, filename)
-            st.markdown(get_download_link(pdf_filename, 'pdf', 'Download PDF'), unsafe_allow_html=True)
-
-# Function to create download link
-def get_download_link(file_path, file_format, text):
-    with open(file_path, "rb") as file:
-        file_content = file.read()
-    href = f'<a href="data:file/{file_format};base64,{file_content.decode("utf-8")}" download="{os.path.basename(file_path)}">{text}</a>'
-    return href
+            st.download_button(label="Download PDF", data=open(pdf_filename, 'rb'), file_name=os.path.basename(pdf_filename), mime="application/pdf")
 
 if __name__ == "__main__":
     main()
