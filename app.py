@@ -43,7 +43,7 @@ def main():
 def get_download_link(file_path, file_format, text):
     with open(file_path, "rb") as file:
         file_content = file.read()
-    href = f'<a href="data:file/{file_format};base64,{file_content}" download="{os.path.basename(file_path)}">{text}</a>'
+    href = f'<a href="data:file/{file_format};base64,{file_content.decode("utf-8")}" download="{os.path.basename(file_path)}">{text}</a>'
     return href
 
 if __name__ == "__main__":
