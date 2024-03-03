@@ -1,0 +1,4 @@
+texlive 
+texlive-xetex 
+texlive-latex-extra 
+pandoc
