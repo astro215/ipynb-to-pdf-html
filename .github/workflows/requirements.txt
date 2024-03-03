@@ -1,6 +1,0 @@
-pypandoc
-streamlit
-pandas
-numpy
-jupyter
-nbconvert
